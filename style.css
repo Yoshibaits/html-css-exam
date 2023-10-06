@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.container{
+    max-width: 3000px;
+    width: 100%;
+}
+.banner{
+    width: 100vw;
+    height: 80vh;
+    background-image: url('./Assets/Banner/HeroImg.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    text-decoration: none;
+    opacity: 0;
+}
+
+.bannertxt{
+    color: aliceblue;
+    text-shadow: 0px 5px black;
+}
+
+.btxth1{
+    font-size: 5rem;
+}
+.btxth2{
+    font-size: 2.75rem;
+}
+/* Body */
+
+.midsection{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.SidekickImg{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.sidekick{
+    box-sizing: border-box;
+    flex: 50%;
+}
+
+
+.sidekick:nth-child(2n){
+    clear: both;
+}
+
+.Stwo, .Sfour{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20px 0px 20px
+}
+
+.midheader{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.midtext{
+    font-size: large;
+    
+}
+
+
+/* Flashsale */
+
+.Flashsale{
+    background-image: url("./Assets/SubHero/SubCat.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+}
+
+.overlay-link-flashsale{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    text-decoration: none;
+    opacity: 0;
+}
+
+/* FEATURED DEALS */
+
+.deals{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.headerdeals{
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.perdeals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 50px 10px;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;    
+    align-items: center;
+    margin: auto;
+    
+}
+.dealsImg{
+    height: 200px;
+    object-fit: cover;
+}
+.dealsHeader, .dealsText{
+    text-align: center;
+    margin: 5px;
+}
+
+.dealsHeader{
+    font-size: medium;
+}
+.dealsText{
+    font-size: small;
+}
+.button{
+    background-color: red;
+    color: white;
+    padding: 0.75rem  1rem;
+    height: 50px;
+    width: 150px;
+    font-size: medium;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1660px){
+    .Flashsale{
+        height:40vh;
+    }
+
+
+}
+@media screen and (max-width: 1047px){
+    .Flashsale{
+        height:30vh;
+    }
+
+    .banner{
+        height: 50vh;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+    .btxth1{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .btxth2{
+        font-size: 1.50rem;
+    }
+    .bannertxt{
+        text-shadow: 0px 4px black;
+    }
+    .midsection{
+        display:grid;
+        gap: 0.5rem;
+        
+    }
+
+    .Flashsale{
+        background-image: url("./Assets/SubHero/SubCatMbl.jpg");
+        height: 40vh;
+    }
+    .headerdeals{
+        font-size: 2rem;
+    }
+}
