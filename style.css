@@ -58,11 +58,33 @@ body{
 
 .midsection{
     width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(100px,auto);
     overflow: hidden;
+    grid-template-areas: 
+    "oneimg twotxt"
+    "fourtxt threeimg";
 }
+
+/* grid areas */
+
+.Soneimg{
+    grid-area: oneimg;
+}
+.Stwotxt{
+    grid-area: twotxt;
+}
+.Sfourtxt{
+    grid-area: fourtxt;
+}
+.Sthreeimg{
+    grid-area: threeimg;
+}
+
+/* end of grid areas */
+
+
 .SidekickImg{
     object-fit: cover;
     height: 100%;
@@ -79,7 +101,7 @@ body{
     clear: both;
 }
 
-.Stwo, .Sfour{
+.Sfourtxt, .Stwotxt{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,6 +204,7 @@ body{
     margin-top: 10px;
 }
 
+/* All the media reposponsiveness */
 @media screen and (max-width: 1660px){
     .Flashsale{
         height:40vh;
@@ -197,10 +220,23 @@ body{
     .banner{
         height: 50vh;
     }
+    .btxth1{
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    .btxth2{
+        font-size: 2.25rem;
+    }
+    .Flashsale{
+        background-image: url("./Assets/SubHero/SubCatMbl.jpg");
+        width: 100vw;
+        height: 80vh;
+    }
 
 }
 
-@media screen and (max-width: 375px){
+
+@media screen and (max-width: 570px){
     .btxth1{
         font-size: 2rem;
         font-weight: 500;
@@ -208,13 +244,32 @@ body{
     .btxth2{
         font-size: 1.50rem;
     }
+    .banner{
+        background-image: url('./Assets/Banner/heroMblImg.jpg');
+    }
+    .overlay-link{
+        height: 50%;
+    }
     .bannertxt{
         text-shadow: 0px 4px black;
     }
+    .Sfourtxt, .Stwotxt{
+        margin: 10px 0;
+    }
+    .midtext{
+        font-size: medium;
+    }
+    .midheader{
+        font-size: larger;
+    }
     .midsection{
-        display:grid;
-        gap: 0.5rem;
-        
+        grid-template-columns: 0, 1fr;
+        grid-template-areas: 
+        "twotxt twotxt"
+        "oneimg oneimg"
+        "fourtxt fourtxt"
+        "threeimg threeimg";
+        margin-bottom: 7px;
     }
 
     .Flashsale{
@@ -223,5 +278,33 @@ body{
     }
     .headerdeals{
         font-size: 2rem;
+    }
+    .dealsImg{
+        height: 150px;
+    }
+    .dealsHeader{
+        font-size: .75rem;
+    }
+    .dealsText{
+        font-size: .50rem;
+    }
+    .button{
+        padding: 2px 0;
+        height: 30px;
+        width: 120px;
+    }
+
+}
+@media screen and (max-width:412px){
+    .item{
+        margin: 0;
+    }
+    .dealsHeader{
+        font-size: .50rem;
+        font-weight: 700;
+    }
+    .dealsText{
+        font-size: .30rem;
+        font-weight: 500;
     }
 }
